@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg_dialog_network"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.home.send.dialog.EditGasDialogFragment"
+    android:paddingTop="24dp"
+    android:paddingBottom="24dp"
+    android:paddingEnd="16dp"
+    android:paddingStart="16dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        tools:text="Phí gas là gì?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/imgClose"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintBottom_toBottomOf="@+id/txtTitle"
+        app:layout_constraintTop_toTopOf="@+id/txtTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_baseline_close_24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtDesc"
+        android:lineHeight="21dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        tools:text="@string/gas_education_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

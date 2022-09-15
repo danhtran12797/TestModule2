@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg_dialog_network"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.home.network.NetDialogFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtChooseNetwork"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingVertical="16dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:text="@string/choose_network"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/imgClose"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtChooseNetwork"
+        app:layout_constraintTop_toTopOf="@+id/txtChooseNetwork"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_baseline_close_24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:id="@+id/viewUnderLine"
+        app:layout_constraintTop_toBottomOf="@+id/txtChooseNetwork"
+        android:background="@color/gray"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvNetwork"
+        android:overScrollMode="never"
+        app:layout_constraintTop_toBottomOf="@+id/viewUnderLine"
+        android:clipToPadding="false"
+        android:paddingBottom="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnImportNet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp"
+        android:layout_marginHorizontal="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_btn_wallet1"
+        android:text="@string/add_network"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".ui.home.send.SendTokenFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        android:paddingHorizontal="8dp"
+        android:paddingBottom="8dp">
+
+        <View
+            android:id="@+id/viewClickImportToken"
+            app:layout_constraintStart_toStartOf="@+id/txtDot"
+            app:layout_constraintEnd_toEndOf="@+id/txtNet"
+            app:layout_constraintTop_toTopOf="@+id/txtSendToken"
+            app:layout_constraintBottom_toBottomOf="@+id/txtNet"
+            android:layout_width="0dp"
+            android:layout_height="0dp"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgBack"
+            app:layout_constraintTop_toTopOf="@+id/txtSendToken"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/txtNet"
+            android:padding="4dp"
+            android:layout_marginStart="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:tint="@color/blue500"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtSendToken"
+            app:layout_constraintEnd_toEndOf="@+id/txtNet"
+            app:layout_constraintStart_toStartOf="@+id/txtDot"
+            app:layout_constraintBottom_toTopOf="@+id/txtNet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/send_to"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtNet"
+            android:gravity="top"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="@string/main_net"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@+id/txtDot" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/txtDot"
+            app:layout_constraintTop_toTopOf="@+id/txtNet"
+            app:layout_constraintBottom_toBottomOf="@+id/txtNet"
+            android:background="@color/green_1"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            app:shapeAppearanceOverlay="@style/Circular"
+            app:layout_constraintEnd_toStartOf="@+id/txtNet"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:paddingVertical="16dp">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="16dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/from"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/layoutFromAddress"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toTopOf="@+id/layoutFromAddress" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutFromAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_layout_from_address"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toEndOf="@+id/barrier2"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.intelnet.omniwallet.view.BlockiesIdenticon
+                android:id="@+id/imgAvatarFrom"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtFromName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Account 1"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/imgAvatarFrom"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                tools:text="Số dư: 100 ETH"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/txtFromName"
+                app:layout_constraintTop_toBottomOf="@+id/txtFromName" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtTo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/to"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tiySearchAddress"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toTopOf="@+id/tiySearchAddress" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tiySearchAddress"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:visibility="visible"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toEndOf="@+id/barrier2"
+            app:layout_constraintTop_toBottomOf="@+id/layoutFromAddress">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtSearchAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_search_public_address"
+                android:textSize="15sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutFill"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_layout_from_address"
+            android:gravity="center_vertical"
+            android:padding="8dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/tiySearchAddress"
+            app:layout_constraintStart_toStartOf="@+id/tiySearchAddress"
+            app:layout_constraintTop_toTopOf="@+id/tiySearchAddress">
+
+            <com.intelnet.omniwallet.view.BlockiesIdenticon
+                android:id="@+id/imgAvatarTo"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtAddressFill"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                tools:text="@string/address_demo" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgChecked"
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:layout_marginStart="8dp"
+                android:background="@color/green_1"
+                android:padding="2dp"
+                android:src="@drawable/ic_baseline_check_24"
+                android:tint="@color/white"
+                app:shapeAppearanceOverlay="@style/Circular" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgDeleteFill"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/ic_baseline_close_24" />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="right"
+            app:constraint_referenced_ids="txtFrom, txtTo" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtRecently"
+            android:background="@drawable/border_top_bottom"
+            android:paddingVertical="8dp"
+            android:paddingHorizontal="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/recently"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@+id/tiySearchAddress" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvRecently"
+            android:paddingBottom="16dp"
+            android:clipToPadding="false"
+            app:layout_constraintTop_toBottomOf="@+id/txtRecently"
+            app:layout_constraintBottom_toTopOf="@+id/btnContinue"
+            android:overScrollMode="never"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnContinue"
+            android:layout_marginHorizontal="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_btn_wallet1"
+            android:text="@string/label_continue"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

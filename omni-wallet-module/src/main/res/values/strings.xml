@@ -1,0 +1,144 @@
+<resources>
+    <string name="app_name">Omni Wallet</string>
+
+    <string name="password_demo">12345678</string>
+
+    <string name="welcome_to_wallet_app">Chào mừng bạn đến với \nOmni Wallet</string>
+    <string name="label_intro_1">Omni Wallet là một ví an toàn được hàng triệu người tin dùng, giúp tất cả mọi người tiếp cận dễ dàng với thế giới web3.</string>
+    <string name="start">Bắt đầu</string>
+    <string name="label_add_wallet_1">Hãy sở hữu một ví thông minh!</string>
+    <string name="label_add_wallet_2">Việc mở tài khoản ví điện tử và liên kết rất dễ dàng. Việc thanh toán thông qua ví điện tử cũng rất đơn giản, bớt phức tạp hơn và nhanh chóng hơn. Omni Wallet sẽ mang đến trải nghiệm tuyệt vời dành cho bạn.</string>
+
+    <string name="t_and_c">Bằng cách tiếp tục, bạn đồng ý với <u>Điều khoản và Điều kiện.</u></string>
+
+    <string name="wallet_settings">Cài đặt ví</string>
+    <string name="create_wallet_or_import_wallet">Nhập một ví có sẵn hoặc tạo mới</string>
+
+    <string name="label_create_wallet">Tạo một ví mới</string>
+    <string name="label_import_private_key">Nhập bằng khóa cá nhân</string>
+    <string name="label_import_secret_recovery_phrase">Sử dụng cụm từ khôi phục bí mật</string>
+
+    <string name="label_input_recovery_phrase">Nhập cụm từ bí mật</string>
+    <string name="hint_input_recovery_phrase">Nhập cụm từ bí mật của bạn</string>
+    <string name="confirm_password">Xác nhận mật khẩu</string>
+    <string name="new_password">Mật khẩu mới</string>
+    <string name="password">Mật khẩu</string>
+    <string name="unlock_by_fingerprint">Mở khóa với Fingerprint ID?</string>
+    <string name="add">Thêm</string>
+    <string name="input">Nhập</string>
+    <string name="least_8_character">Phải dài ít nhất 8 ký tự</string>
+    <string name="login_by_biometric">Đăng nhập bằng sinh trắc học</string>
+    <string name="label_create_password">Tạo mật khẩu</string>
+    <string name="label_create_password2">Mở mật khẩu này sẽ chỉ mở khóa Omni Wallet của bạn trên thiết bị này.</string>
+
+    <string name="wallet_security">Bảo mật ví</string>
+
+    <string name="label_wallet_security1">Viết Cụm từ khôi phục bí mật ra</string>
+    <string name="label_wallet_security2">Đây là Cụm từ khôi phục bí mật của bạn. Hãy viết nó ra giấy và cất giữ ở nơi an toàn. Bạn sẽ được đề nghị nhập lại cụm từ này (theo đúng thứ tự) ở bước kế tiếp.</string>
+
+    <string name="label_confirm_recovery_phrase1">Xác nhận cụm từ khôi phục bí mật</string>
+    <string name="label_confirm_recovery_phrase2">Chọn mỗi từ theo đúng thứ tự đã được hiển thị cho bạn.</string>
+
+    <string name="label_continue">Tiếp tục</string>
+    <string name="complete_to_backup">Hoàn thành sao lưu</string>
+    <string name="welcome_back">Chào mừng bạn trở lại!</string>
+    <string name="unlock">Mở khóa</string>
+    <string name="lock">Khóa</string>
+
+    <string name="label_login_1">Ví không mở khóa? Bạn có thể XÓA ví hiện tại và cài đặt ví mới</string>
+    <string name="reset_wallet">Cài lại ví</string>
+
+    <string name="wallet">Wallet</string>
+    <string name="send">Gửi</string>
+    <string name="receive">Nhận</string>
+    <string name="swap">Hoán đổi</string>
+    <string name="import_token">Thêm token</string>
+    <string name="import_token2">Nhập token</string>
+    <string name="main_net">Ethereum Main Network</string>
+    <string name="ropsten_test_net">Ropsten Test Network</string>
+    <string name="kovan_test_net">Kovan Test Network</string>
+    <string name="rinkeby_test_net">Rinkeby Test Network</string>
+    <string name="goerli_test_net">Goerli Test Network</string>
+    <string name="dot_net">•</string>
+    <string name="address_demo">0x39fB0Ea8aAdc23683f2d237801e912f55536F5cF</string>
+    <string name="private_key_demo">8b9a47d4cc36a15ad1a262ee834268826ea786d6b5d28095f879d87318e96c33</string>
+    <string name="word_phrase_demo">treat short panther process involve patient gold spoil little pudding road predict</string>
+    <string name="word_phrase_demo2">damage day correct salt wood joy jeans senior force topic person laundry</string>
+    <string name="dont_see_your_token">Không thấy token của mình</string>
+    <string name="other_network">Mạng khác</string>
+    <string name="choose_network">Chọn mạng</string>
+    <string name="add_network">Thêm mạng</string>
+    <string name="close">Đóng</string>
+    <string name="new_rpc_network">Mạng RPC mới</string>
+    <string name="label_add_network1">Sử dụng mạng hỗ trợ RPC tùy chỉnh thông qua URL thay vì một trong các mạng được cung cấp.</string>
+
+    <string name="name_network">Tên mạng</string>
+    <string name="new_rpc_url">URl của RPC</string>
+    <string name="chain_id">ID chuỗi</string>
+    <string name="currency_symbol">Biểu tượng</string>
+    <string name="block_explorer_url">URL của Block Explorer</string>
+    <string name="label_import_token1">Bất kỳ ai cũng có thể tạo token, bao gồm cả việc tạo các phiên bản giả mạo của token hiện có. Tìm hiểu thêm về lừa đảo và rủi ro bảo mật.</string>
+
+    <string name="token_contract_address">Địa chỉ Token</string>
+    <string name="token_symbol">Biểu tượng Token</string>
+    <string name="token_decimal">Token chính xác</string>
+    <string name="scan_address_to_receive_payment">Sao chép địa chỉ để nhận thanh toán</string>
+    <string name="copy">Sao chép</string>
+    <string name="send_to">Gửi cho</string>
+    <string name="from">From:</string>
+    <string name="to">To:</string>
+    <string name="from1">From</string>
+    <string name="to1">To</string>
+    <string name="recently">Gần đây</string>
+    <string name="hint_search_public_address">Tìm kiếm, địa chỉ công khai</string>
+    <string name="amount">Số tiền</string>
+    <string name="cancel">Hủy</string>
+    <string name="use_max">Dùng tối đa</string>
+    <string name="confirm">Xác nhận</string>
+    <string name="estimated_gas_fee">Phí gas ước tính</string>
+    <string name="total">Tổng</string>
+    <string name="total_amount">Tổng số tiền</string>
+    <string name="view_all_history_on_testnet">Xem toàn bộ lịch sử trên Testnet</string>
+    <string name="you_have_no_transactions">Bạn không có giao dịch nào!</string>
+    <string name="format_date_demo">Tháng 8 1 tại 9:28 pm</string>
+    <string name="view_one_testnet">XEM TRÊN Testnet</string>
+    <string name="status">Trạng thái</string>
+    <string name="date">Ngày</string>
+    <string name="toast_address_copied">Đã sao chép địa chỉ công khai vào bộ nhớ đệm</string>
+    <string name="toast_address_smart_contract_copied">Đã sao chép địa chỉ token</string>
+    <string name="toast_word_phrase_copied">Đã sao chép Cụm từ khôi phục bí mật</string>
+    <string name="content_reset_wallet">Bạn có chắc là cài lại ví! Dữ liệu sẽ bị mất 😃</string>
+
+    <string name="content_balance_from_send">Số dư: %s</string>
+
+    <string name="content_zero_balance">Bạn có 0 %s trong tài khoản để trả phí giao dịch. Mua %s hoặc nạp từ tài khoản khác.</string>
+
+    <string name="confirmed">Đã xác nhận</string>
+    <string name="failed">Đã thất bại</string>
+    <string name="sent_to">Đã gửi %s</string>
+    <string name="receive_from">Đã nhận %s</string>
+
+    <string name="view_on_block_explorer">Xem trên trình khám phá khối</string>
+    <string name="token_details">Chi tiết token</string>
+    <string name="lock_title">Bạn thực sự muốn khóa ví này?</string>
+    <string name="hide_token">Ẩn Token</string>
+    <string name="balance_not_enough">Số dư không đủ!</string>
+    <string name="please_input_amount">Vui lòng nhập số tiền!</string>
+
+    <string name="title_edit_gas">Sửa phí gas</string>
+    <string name="estimate_gas">Giới hạn gas</string>
+    <string name="gas_price">Giá gas</string>
+    <string name="save">Lưu</string>
+
+    <string name="what_is_gas">Phí gas là gì?</string>
+
+    <string name="gas_education_1">Phí gas được trả cho thợ đào tiền mã hóa xử lý giao dịch trên Ethereum. <b>Omni Wallet không thu lợi từ phí gas.</b> \n\nPhí gas dao động theo lưu lượng truy cập mạng và độ phức tạp của giao dịch.</string>
+    <string name="learn_more_gas_limit">Giới hạn gas là số đơn vị gas tối đa mà bạn sẵn sàng sử dụng. Đơn vị gas là một hệ số nhân với \"Phí ưu tiên tối đa\" và \"Phí tối đa\".</string>
+    <string name="learn_more_gas_price">Mạng này yêu cầu trường \"Giá gas\" khi gửi giao dịch. Giá gas là số tiền tối đa bạn sẵn sàng trả cho mỗi đơn vị gas.</string>
+
+    <string name="please_login_again">Vui lòng đăng nhập lại!!!</string>
+
+    <string name="toast_no_address_public">Không tìm thấy địa chỉ công khai</string>
+    <string name="turn_off_biometric">Bạn sẽ tắt tính năng đăng nhập bằng sinh trắc học. Bạn có muốn tiếp tục?</string>
+
+</resources>

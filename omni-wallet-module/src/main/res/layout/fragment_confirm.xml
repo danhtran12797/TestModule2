@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ui.home.send.ConfirmFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        android:paddingHorizontal="8dp"
+        android:paddingBottom="8dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgBack"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="4dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:tint="@color/blue500"
+            app:layout_constraintBottom_toBottomOf="@id/txtNet"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtConfirm" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="4dp"
+            android:text="@string/cancel"
+            android:textColor="@color/blue500"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/txtNet"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtConfirm" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtConfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/confirm"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/txtNet"
+            app:layout_constraintEnd_toEndOf="@+id/txtNet"
+            app:layout_constraintStart_toStartOf="@+id/txtDot" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtNet"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="4dp"
+            android:gravity="top"
+            android:text="@string/main_net"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@+id/txtDot" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/txtDot"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:background="@color/green_1"
+            app:layout_constraintBottom_toBottomOf="@+id/txtNet"
+            app:layout_constraintEnd_toStartOf="@+id/txtNet"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtNet"
+            app:shapeAppearanceOverlay="@style/Circular" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:paddingVertical="16dp">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="16dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/from"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/layoutFromAddress"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toTopOf="@+id/layoutFromAddress" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutFromAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_layout_from_address"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toEndOf="@+id/barrier2"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.intelnet.omniwallet.view.BlockiesIdenticon
+                android:id="@+id/imgAvatarFrom"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtFromName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Account 1"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/imgAvatarFrom"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                tools:text="Số dư: 100 ETH"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/txtFromName"
+                app:layout_constraintTop_toBottomOf="@+id/txtFromName" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtTo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/to"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/layoutFill"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toTopOf="@+id/layoutFill" />
+
+        <LinearLayout
+            android:id="@+id/layoutFill"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_layout_from_address"
+            android:gravity="center_vertical"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/layoutFromAddress"
+            app:layout_constraintStart_toStartOf="@+id/layoutFromAddress"
+            app:layout_constraintTop_toBottomOf="@+id/layoutFromAddress">
+
+            <com.intelnet.omniwallet.view.BlockiesIdenticon
+                android:id="@+id/imgAvatarTo"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:src="@drawable/ic_launcher_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/Circular" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtAddressFill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                tools:text="@string/address_demo" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgDeleteFill"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/ic_baseline_check_24"
+                android:tint="@color/green_1" />
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="right"
+            app:constraint_referenced_ids="txtFrom, txtTo" />
+
+        <View
+            android:id="@+id/viewUnderLine"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/grey100"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutFill" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtTextAmount"
+            android:textSize="15sp"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:text="@string/amount"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/viewUnderLine"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtAmount"
+            android:textSize="38sp"
+            android:textColor="@color/black"
+            tools:text="0.005 ETH"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtTextAmount"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutGas"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtAmount"
+            android:layout_marginHorizontal="24dp"
+            android:background="@drawable/bg_layout_from_address"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtTextGas"
+                android:drawablePadding="4dp"
+                android:drawableEnd="@drawable/ic_baseline_info_24"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:text="@string/estimated_gas_fee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtGas"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textStyle="bold"
+                android:textColor="@color/blue500"
+                android:textSize="15sp"
+                android:text="..."
+                tools:text="0.0051 ETH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:id="@+id/view2"
+                android:background="@color/grey100"
+                android:layout_marginTop="12dp"
+                app:layout_constraintTop_toBottomOf="@+id/txtGas"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtTextTotal"
+                android:layout_marginTop="12dp"
+                app:layout_constraintTop_toBottomOf="@+id/view2"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:text="@string/total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtTotal"
+                android:layout_marginTop="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view2"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:text="..."
+                tools:text="0.0051 ETH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSend"
+            android:enabled="false"
+            android:layout_marginHorizontal="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_btn_wallet1"
+            android:gravity="center"
+            android:text="@string/send"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

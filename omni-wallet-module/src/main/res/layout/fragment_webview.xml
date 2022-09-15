@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.webview.WebViewFragment">
+
+    <LinearLayout
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="8dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgBack"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="4dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:tint="@color/blue500"
+            app:layout_constraintBottom_toBottomOf="@id/txtNet"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtSymbolToken" />
+
+       <androidx.appcompat.widget.AppCompatTextView
+           android:id="@+id/txtTitleToolbar"
+           android:gravity="center"
+           android:textColor="@color/black"
+           android:textSize="18sp"
+           tools:text="testnet.bscscan.com"
+           android:layout_marginStart="8dp"
+           android:layout_marginEnd="8dp"
+           android:layout_weight="1"
+           android:layout_width="0dp"
+           android:layout_height="30dp"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgShare"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="4dp"
+            android:src="@drawable/ic_baseline_share_24"
+            android:tint="@color/blue500"
+            app:layout_constraintBottom_toBottomOf="@id/txtNet"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtSymbolToken" />
+
+    </LinearLayout>
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+</LinearLayout>

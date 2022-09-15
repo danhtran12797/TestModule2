@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ui.home.detailToken.DetailTokenFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="8dp">
+
+        <View
+            android:id="@+id/viewClickNetWork"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/txtNet"
+            app:layout_constraintEnd_toEndOf="@+id/txtNet"
+            app:layout_constraintStart_toStartOf="@+id/txtDot"
+            app:layout_constraintTop_toTopOf="@+id/txtSymbolToken" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgBack"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="4dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:tint="@color/blue500"
+            app:layout_constraintBottom_toBottomOf="@id/txtNet"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtSymbolToken" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgMenu"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="2dp"
+            android:src="@drawable/ic_baseline_more_horiz_24"
+            android:tint="@color/blue500"
+            app:layout_constraintBottom_toBottomOf="@id/txtNet"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtSymbolToken" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtSymbolToken"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="BNB"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/txtNet"
+            app:layout_constraintEnd_toEndOf="@+id/txtNet"
+            app:layout_constraintStart_toStartOf="@+id/txtDot" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtNet"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="4dp"
+            android:gravity="top"
+            android:text="@string/main_net"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@+id/txtDot" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/txtDot"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:background="@color/green_1"
+            app:layout_constraintBottom_toBottomOf="@+id/txtNet"
+            app:layout_constraintEnd_toStartOf="@+id/txtNet"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtNet"
+            app:shapeAppearanceOverlay="@style/Circular" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvHistoryTransaction"
+            android:scrollbars="vertical"
+            android:overScrollMode="never"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:itemCount="3"
+            tools:listitem="@layout/item_history_token" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>

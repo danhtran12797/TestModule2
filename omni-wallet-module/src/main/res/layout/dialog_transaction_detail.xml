@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog_network"
+    tools:context=".ui.home.detailToken.DetailTransactionDialogFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtChooseNetwork"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingVertical="16dp"
+        android:text="Đã gửi BNB"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/imgClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_baseline_close_24"
+        app:layout_constraintBottom_toBottomOf="@+id/txtChooseNetwork"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtChooseNetwork" />
+
+    <View
+        android:id="@+id/viewUnderLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey40"
+        app:layout_constraintTop_toBottomOf="@+id/txtChooseNetwork" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtTextStatus"
+        app:layout_constraintTop_toBottomOf="@+id/viewUnderLine"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/gray_2"
+        android:textSize="12sp"
+        android:text="@string/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtTextDate"
+        app:layout_constraintBottom_toBottomOf="@+id/txtTextStatus"
+        app:layout_constraintTop_toTopOf="@+id/txtTextStatus"
+        app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+        android:textColor="@color/gray_2"
+        android:textSize="12sp"
+        android:text="@string/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtStatus"
+        app:layout_constraintTop_toBottomOf="@+id/txtTextStatus"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        android:layout_marginTop="8dp"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:textColor="@color/green_1"
+        tools:text="Đã xác nhận"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtDateTime"
+        app:layout_constraintBottom_toBottomOf="@+id/txtStatus"
+        app:layout_constraintTop_toTopOf="@+id/txtStatus"
+        app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:text="@string/format_date_demo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/grey100"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintTop_toBottomOf="@+id/txtStatus" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtTextFrom"
+        app:layout_constraintTop_toBottomOf="@+id/view1"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/gray_2"
+        android:textSize="12sp"
+        android:text="@string/from1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtTexTo"
+        app:layout_constraintBottom_toBottomOf="@+id/txtTextFrom"
+        app:layout_constraintTop_toTopOf="@+id/txtTextFrom"
+        app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+        android:textColor="@color/gray_2"
+        android:textSize="12sp"
+        android:text="@string/to1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtFrom"
+        app:layout_constraintTop_toBottomOf="@+id/txtTextFrom"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        android:layout_marginTop="8dp"
+        android:textSize="13sp"
+        android:textColor="@color/black"
+        tools:text="0x39fB...F5cF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtTo"
+        app:layout_constraintBottom_toBottomOf="@+id/txtFrom"
+        app:layout_constraintTop_toTopOf="@+id/txtFrom"
+        app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        tools:text="0x39fB...F5cF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/grey100"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintTop_toBottomOf="@+id/txtFrom" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtTextNonce"
+        android:textColor="@color/gray_2"
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        android:layout_marginTop="16dp"
+        android:textSize="12sp"
+        android:text="NONCE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtNonce"
+        app:layout_constraintTop_toBottomOf="@+id/txtTextNonce"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        android:layout_marginTop="8dp"
+        android:textSize="13sp"
+        android:textColor="@color/black"
+        tools:text="#1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutGas"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/bg_layout_from_address"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/txtNonce">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtTextAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/amount"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtAmount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:ellipsize="marquee"
+            android:gravity="end"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtTextAmount"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="0.3 BNB" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtTextGas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/estimated_gas_fee"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtTextAmount" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtGas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:ellipsize="marquee"
+            android:gravity="end"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtTextGas"
+            app:layout_constraintTop_toBottomOf="@+id/txtAmount"
+            tools:text="0.00025 BNB" />
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/grey100"
+            app:layout_constraintTop_toBottomOf="@+id/txtGas" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtTextTotalAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/total_amount"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtTotalAmount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="end"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtTextTotalAmount"
+            app:layout_constraintTop_toBottomOf="@+id/view3"
+            tools:text="0.30025 BNB" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="txtTextGas,txtGas,view3,txtTextTotalAmount,txtTotalAmount" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnViewTestnet"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="@null"
+        android:text="@string/view_one_testnet"
+        android:textAllCaps="false"
+        android:textColor="@color/blue500"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutGas"
+        app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

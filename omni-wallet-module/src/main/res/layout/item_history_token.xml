@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="16dp"
+    android:background="@color/white"
+    android:foreground="?attr/selectableItemBackground"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtDateTime"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        tools:text="#1 - Tháng 8 1 tại 9:28 pm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgAction"
+        app:layout_constraintTop_toTopOf="@+id/txtName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/txtStatus"
+        android:src="@drawable/ic_send_24"
+        android:tint="@color/blue500"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        app:shapeAppearanceOverlay="@style/Circular"
+        app:contentPadding="4dp"
+        android:padding="1.3dp"
+        app:strokeWidth="1.3dp"
+        app:strokeColor="@color/blue500" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtName"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toEndOf="@+id/imgAction"
+        app:layout_constraintTop_toBottomOf="@+id/txtDateTime"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        tools:text="Đã gửi BNB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtStatus"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@+id/txtName"
+        app:layout_constraintTop_toBottomOf="@+id/txtName"
+        android:textStyle="bold"
+        android:textSize="13sp"
+        android:textColor="@color/green_1"
+        tools:text="Đã xác nhận"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtAmount"
+        app:layout_constraintTop_toTopOf="@+id/txtName"
+        app:layout_constraintBottom_toBottomOf="@+id/txtStatus"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        tools:text="0.3 BNB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

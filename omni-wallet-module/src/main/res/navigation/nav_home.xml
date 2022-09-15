@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_home"
+    app:startDestination="@id/loginLaterFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.intelnet.omniwallet.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_addNetworkFragment"
+            app:destination="@id/addNetworkFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right" />
+        <action
+            android:id="@+id/action_homeFragment_to_addTokenFragment"
+            app:destination="@id/addTokenFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right" />
+        <action
+            android:id="@+id/action_homeFragment_to_receiveTokenDialogFragment"
+            app:destination="@id/receiveTokenDialogFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_sendTokenFragment"
+            app:destination="@id/sendTokenFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right" />
+        <action
+            android:id="@+id/action_homeFragment_to_loginLaterFragment"
+            app:destination="@id/loginLaterFragment"
+            app:popUpTo="@id/nav_home"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_homeFragment_to_detailTokenFragment"
+            app:destination="@id/detailTokenFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right" />
+        <argument
+            android:name="address"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/addNetworkFragment"
+        android:name="com.intelnet.omniwallet.ui.home.network.AddNetworkFragment"
+        android:label="fragment_add_network"
+        tools:layout="@layout/fragment_add_network" />
+    <fragment
+        android:id="@+id/addTokenFragment"
+        android:name="com.intelnet.omniwallet.ui.home.addToken.AddTokenFragment"
+        android:label="fragment_add_token"
+        tools:layout="@layout/fragment_add_token" />
+    <dialog
+        android:id="@+id/receiveTokenDialogFragment"
+        android:name="com.intelnet.omniwallet.ui.home.receive.ReceiveTokenDialogFragment"
+        android:label="fragment_receive_token"
+        tools:layout="@layout/fragment_receive_token">
+        <argument
+            android:name="address"
+            app:argType="string" />
+    </dialog>
+    <fragment
+        android:id="@+id/loginLaterFragment"
+        android:name="com.intelnet.omniwallet.ui.login.LoginLaterFragment"
+        android:label="fragment_login_later"
+        tools:layout="@layout/fragment_login_later">
+        <action
+            android:id="@+id/action_loginLaterFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/loginLaterFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/sendTokenFragment"
+        android:name="com.intelnet.omniwallet.ui.home.send.SendTokenFragment"
+        android:label="fragment_send_token"
+        tools:layout="@layout/fragment_send_token">
+        <argument
+            android:name="address"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_sendTokenFragment_to_amountFragment"
+            app:destination="@id/amountFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right" />
+        <argument
+            android:name="index_token"
+            app:argType="integer" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/amountFragment"
+        android:name="com.intelnet.omniwallet.ui.home.send.AmountFragment"
+        android:label="fragment_amount"
+        tools:layout="@layout/fragment_amount">
+        <action
+            android:id="@+id/action_amountFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_amountFragment_to_confirmFragment"
+            app:destination="@id/confirmFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right" />
+        <argument
+            android:name="to_address"
+            app:argType="string" />
+        <argument
+            android:name="index_token"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmFragment"
+        android:name="com.intelnet.omniwallet.ui.home.send.ConfirmFragment"
+        android:label="fragment_confirm"
+        tools:layout="@layout/fragment_confirm">
+        <action
+            android:id="@+id/action_confirmFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_confirmFragment_to_detailTokenFragment"
+            app:destination="@id/detailTokenFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right"
+            app:popUpTo="@id/homeFragment" />
+        <argument
+            android:name="to_address"
+            app:argType="string" />
+        <argument
+            android:name="index_token"
+            app:argType="integer" />
+        <argument
+            android:name="amount"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailTokenFragment"
+        android:name="com.intelnet.omniwallet.ui.home.detailToken.DetailTokenFragment"
+        android:label="fragment_detail_token"
+        tools:layout="@layout/fragment_detail_token">
+        <argument
+            android:name="index_token"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_detailTokenFragment_to_sendTokenFragment"
+            app:destination="@id/sendTokenFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right" />
+        <action
+            android:id="@+id/action_detailTokenFragment_to_receiveTokenDialogFragment"
+            app:destination="@id/receiveTokenDialogFragment" />
+        <action
+            android:id="@+id/action_detailTokenFragment_to_webViewFragment"
+            app:destination="@id/webViewFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right" />
+        <action
+            android:id="@+id/action_detailTokenFragment_to_smartContractDetailFragment"
+            app:destination="@id/smartContractDetailFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right" />
+        <argument
+            android:name="await_transaction"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/webViewFragment"
+        android:name="com.intelnet.omniwallet.ui.webview.WebViewFragment"
+        android:label="fragment_webview"
+        tools:layout="@layout/fragment_webview">
+        <argument
+            android:name="url"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/smartContractDetailFragment"
+        android:name="com.intelnet.omniwallet.ui.home.detailToken.SmartContractDetailFragment"
+        android:label="fragment_infor_smart_contract"
+        tools:layout="@layout/fragment_infor_smart_contract">
+        <argument
+            android:name="index_token"
+            app:argType="integer" />
+    </fragment>
+
+</navigation>

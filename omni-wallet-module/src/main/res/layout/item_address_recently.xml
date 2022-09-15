@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="?attr/selectableItemBackground"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingVertical="16dp"
+    android:paddingHorizontal="16dp">
+
+    <com.intelnet.omniwallet.view.BlockiesIdenticon
+        android:id="@+id/imgAddress"
+        app:shapeAppearanceOverlay="@style/Circular"
+        android:layout_width="38dp"
+        android:layout_height="38dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtAddress"
+        android:layout_marginStart="16dp"
+        tools:text="0x5774...e475"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="30dp"/>
+
+</LinearLayout>

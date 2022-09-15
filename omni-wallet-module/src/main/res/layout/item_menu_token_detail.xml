@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp"
+    android:paddingEnd="16dp"
+    android:paddingStart="16dp">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtNameAction"
+        android:textSize="16sp"
+        android:textColor="@color/blue500"
+        android:text="@string/view_all_history_on_testnet"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</FrameLayout>

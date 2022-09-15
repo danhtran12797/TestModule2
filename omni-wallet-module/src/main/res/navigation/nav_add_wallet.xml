@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_add_wallet"
+    app:startDestination="@id/addWalletFragment">
+
+    <fragment
+        android:id="@+id/addWalletFragment"
+        android:name="com.intelnet.omniwallet.ui.addWallet.AddWalletFragment"
+        android:label="fragment_add_wallet"
+        tools:layout="@layout/fragment_add_wallet" >
+        <action
+            android:id="@+id/action_addWalletFragment_to_importPhraseFragment"
+            app:destination="@id/importPhraseFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right" />
+        <action
+            android:id="@+id/action_addWalletFragment_to_importKeyFragment"
+            app:destination="@id/importKeyFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right" />
+        <action
+            android:id="@+id/action_addWalletFragment_to_createPassFragment"
+            app:destination="@id/createPassFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/importKeyFragment"
+        android:name="com.intelnet.omniwallet.ui.addWallet.importWallet.ImportKeyFragment"
+        android:label="fragment_import_key"
+        tools:layout="@layout/fragment_import_key" />
+    <fragment
+        android:id="@+id/importPhraseFragment"
+        android:name="com.intelnet.omniwallet.ui.addWallet.importWallet.ImportPhraseFragment"
+        android:label="fragment_import_phrase"
+        tools:layout="@layout/fragment_import_phrase" />
+    <fragment
+        android:id="@+id/createPassFragment"
+        android:name="com.intelnet.omniwallet.ui.addWallet.createWallet.CreatePassFragment"
+        android:label="fragment_create_pass"
+        tools:layout="@layout/fragment_create_pass" >
+        <action
+            android:id="@+id/action_createPassFragment_to_memorizePhraseFragment"
+            app:destination="@id/memorizePhraseFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right"
+            app:popUpTo="@id/addWalletFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/memorizePhraseFragment"
+        android:name="com.intelnet.omniwallet.ui.addWallet.createWallet.MemorizePhraseFragment"
+        android:label="fragment_memorize_phrase"
+        tools:layout="@layout/fragment_memorize_phrase" >
+        <action
+            android:id="@+id/action_memorizePhraseFragment_to_confirmPhraseFragment"
+            app:destination="@id/confirmPhraseFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right"
+            app:popUpTo="@id/addWalletFragment" />
+        <argument android:name="word_phrase"
+            app:argType="string" />
+        <argument android:name="address"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmPhraseFragment"
+        android:name="com.intelnet.omniwallet.ui.addWallet.createWallet.ConfirmPhraseFragment"
+        android:label="fragment_confirm_phrase"
+        tools:layout="@layout/fragment_confirm_phrase" >
+
+        <argument
+            android:name="seed_code"
+            app:argType="string" />
+        <argument android:name="address"
+            app:argType="string" />
+    </fragment>
+
+</navigation>

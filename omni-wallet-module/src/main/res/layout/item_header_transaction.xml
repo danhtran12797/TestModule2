@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:padding="16dp">
+
+    <com.intelnet.omniwallet.view.BlockiesIdenticon
+        android:id="@+id/imgToken"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtAmountToken"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        tools:text="0.09677 BNB"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgToken" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtAmountDollar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        tools:text="$26.85"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAmountToken" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgReceive"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/blue500"
+        android:rotation="90"
+        android:src="@drawable/ic_baseline_keyboard_tab_24"
+        android:tint="@color/white"
+        app:contentPadding="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/imgSend"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAmountDollar"
+        app:shapeAppearanceOverlay="@style/Circular" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtReceive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/receive"
+        android:textColor="@color/blue500"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/imgReceive"
+        app:layout_constraintStart_toStartOf="@+id/imgReceive"
+        app:layout_constraintTop_toBottomOf="@+id/imgReceive" />
+
+    <View
+        android:id="@+id/viewReceive"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintBottom_toBottomOf="@+id/txtReceive"
+        app:layout_constraintEnd_toEndOf="@+id/imgReceive"
+        app:layout_constraintStart_toStartOf="@+id/imgReceive"
+        app:layout_constraintTop_toTopOf="@+id/imgReceive" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgSend"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/blue500"
+        android:src="@drawable/ic_baseline_arrow_send_24"
+        android:tint="@color/white"
+        app:contentPadding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imgReceive"
+        app:layout_constraintTop_toBottomOf="@+id/txtAmountDollar"
+        app:shapeAppearanceOverlay="@style/Circular" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/send"
+        android:textColor="@color/blue500"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/imgSend"
+        app:layout_constraintStart_toStartOf="@+id/imgSend"
+        app:layout_constraintTop_toBottomOf="@+id/imgSend" />
+
+    <View
+        android:id="@+id/viewSend"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintBottom_toBottomOf="@+id/txtSend"
+        app:layout_constraintEnd_toEndOf="@+id/imgSend"
+        app:layout_constraintStart_toStartOf="@+id/imgSend"
+        app:layout_constraintTop_toTopOf="@+id/imgSend" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

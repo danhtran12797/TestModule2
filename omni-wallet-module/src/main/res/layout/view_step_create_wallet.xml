@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingStart="32dp"
+    android:paddingEnd="32dp"
+    android:clipToPadding="false">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtNumber1"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:text="1"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toStartOf="@+id/txtNumber2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtNumber2"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:text="2"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toStartOf="@+id/txtNumber3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txtNumber1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtNumber3"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:text="3"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txtNumber2"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtTextNumber1"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/txtNumber1"
+        app:layout_constraintEnd_toEndOf="@+id/txtNumber1"
+        app:layout_constraintTop_toBottomOf="@+id/txtNumber1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_create_password"
+        android:textSize="10sp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtTextNumber2"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/txtNumber2"
+        app:layout_constraintEnd_toEndOf="@+id/txtNumber2"
+        app:layout_constraintTop_toBottomOf="@+id/txtNumber2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/wallet_security"
+        android:textSize="10sp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtTextNumber3"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/txtNumber3"
+        app:layout_constraintEnd_toEndOf="@+id/txtNumber3"
+        app:layout_constraintTop_toBottomOf="@+id/txtNumber3"
+        android:layout_width="wrap_content"
+        android:minLines="2"
+        android:maxWidth="80dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="@string/label_wallet_security1"
+        android:textSize="10sp" />
+
+
+    <View
+        android:id="@+id/line1"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toStartOf="@+id/txtNumber2"
+        app:layout_constraintStart_toEndOf="@+id/txtNumber1"
+        app:layout_constraintTop_toTopOf="@+id/txtNumber1"
+        app:layout_constraintBottom_toBottomOf="@+id/txtNumber1"
+        android:layout_width="0dp"
+        android:layout_height="2dp"/>
+
+    <View
+        android:id="@+id/line2"
+        android:background="@color/gray"
+        app:layout_constraintStart_toEndOf="@+id/txtNumber2"
+        app:layout_constraintEnd_toStartOf="@+id/txtNumber3"
+        app:layout_constraintTop_toTopOf="@+id/txtNumber2"
+        app:layout_constraintBottom_toBottomOf="@+id/txtNumber2"
+        android:layout_width="0dp"
+        android:layout_height="2dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

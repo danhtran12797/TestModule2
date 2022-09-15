@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="32dp"
+    android:background="@drawable/bg_receive_token_dialog"
+    tools:context=".ui.home.receive.ReceiveTokenDialogFragment">
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="45dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_baseline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/viewUnderLine"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/grey100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view1" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtReceive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/receive"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewUnderLine" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgQR"
+        android:scaleType="fitCenter"
+        android:layout_width="210dp"
+        android:layout_height="210dp"
+        android:src="@drawable/qrcode_demo"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/txtReceive"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textDescScan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgQR"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:text="@string/scan_address_to_receive_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:id="@+id/layoutAddressWallet"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_group_copy_address"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textDescScan"
+        android:paddingVertical="8dp"
+        android:paddingHorizontal="8dp"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtAddress"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            tools:text="0x60Ae...1483"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtCopy"
+            android:textSize="12sp"
+            android:layout_marginStart="4dp"
+            android:paddingVertical="4dp"
+            android:paddingHorizontal="8dp"
+            android:background="@drawable/bg_txt_copy"
+            android:textColor="@color/black"
+            android:text="@string/copy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgShareAddress"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_baseline_share_24"
+            android:tint="@color/gray"
+            android:padding="2dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
