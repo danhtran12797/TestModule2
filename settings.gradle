@@ -13,4 +13,5 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "TestModule2"
-include ':hello-danh'
+include ':app'
+include ':omni-wallet-module'
